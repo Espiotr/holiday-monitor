@@ -19,7 +19,7 @@ class HolidayScraper:
             headless=False,
             slow_mo=300
         )
-        )
+        
 
         self.page = self.browser.new_page()
 
