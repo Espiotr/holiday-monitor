@@ -2,7 +2,6 @@ from config import Config
 from scraper import HolidayScraper
 from logger import log
 from telegram import send_message
-from telegram_config import BOT_TOKEN
 
 config = Config()
 
@@ -88,7 +87,7 @@ if price <= limit and old_price > limit:
     )
 
     send_message(
-        BOT_TOKEN,
+        None,
         f"🔥 ALARM! Liberty Lara: cena {price} CHF. Limit: {limit} CHF."
     )
 
@@ -99,7 +98,7 @@ elif old_price != price:
     )
 
     send_message(
-        BOT_TOKEN,
+        None,
         f"📉 Liberty Lara: cena zmieniła się z {old_price} CHF na {price} CHF."
     )
 
