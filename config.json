@@ -1,0 +1,26 @@
+{
+  "departure_airport": "ZRH",
+  "destination": "Antalya",
+
+  "departure_date": "2026-10-24",
+  "return_date": "2026-11-01",
+
+  "adults": 2,
+
+  "children": [
+    {
+      "age": 1
+    }
+  ],
+
+  "direct_flights": true,
+
+  "currency": "CHF",
+
+  "price_limit": 2000,
+
+  "hotels": [
+    "Liberty Lara"
+
+  ]
+}
