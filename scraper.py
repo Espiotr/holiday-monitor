@@ -15,9 +15,11 @@ class HolidayScraper:
 
         self.playwright = sync_playwright().start()
 
+        import os
+
         self.browser = self.playwright.chromium.launch(
-            headless=False,
-            slow_mo=300
+            headless=os.environ.get("GITHUB_ACTIONS") == "true",
+            slow_mo=300 if os.environ.get("GITHUB_ACTIONS") != "true" else 0
         )
 
         self.page = self.browser.new_page()
